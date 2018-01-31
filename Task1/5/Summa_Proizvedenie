@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Summa_Proizvedenie {
+	public static void main(String[] args) {
+		
+		int N, t, x7,x6,x5, x4, x3, x2, x1;
+		
+		boolean b = false;
+		Scanner sc = new Scanner(System.in);
+			N = sc.nextInt();
+			
+		t = N;
+			x1 = t % 10;
+				t = t / 10;
+			x2 = t % 10;
+				t = t / 10;
+			x3 = t % 10;
+				t = t / 10;
+			x4 = t % 10;
+				t = t / 10;
+			x5 = t % 10;
+				t = t / 10;
+				
+		int S,P;
+		S=x1+x2+x3+x4+x5;
+		P=x1*x2*x3*x4*x5;
+
+		System.out.println(S+" "+P);
+				
+	}
+}
+//�������� ���������, ������� ������� ����� � ������������ ���� ��������-
+//���� ����� N.
