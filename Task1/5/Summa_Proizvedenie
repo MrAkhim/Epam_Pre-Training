@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Summa_Proizvedenie {
 	public static void main(String[] args) {
 		
-		int N, t, x7,x6,x5, x4, x3, x2, x1;
+		int N, t, x5, x4, x3, x2, x1;
 		
 		boolean b = false;
 		Scanner sc = new Scanner(System.in);
@@ -29,5 +29,4 @@ public class Summa_Proizvedenie {
 				
 	}
 }
-//�������� ���������, ������� ������� ����� � ������������ ���� ��������-
-//���� ����� N.
+
