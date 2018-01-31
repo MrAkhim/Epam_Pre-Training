@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Kolco {
+	public static void main(String[] args) {
+		double R2, R1, Sq;
+		Scanner sc = new Scanner(System.in);
+		R2 = sc.nextDouble();
+		R1 = sc.nextDouble();
+		double pi = Math.PI;
+		Sq = pi * R2 - pi * R1;
+		System.out.println("Sq=" + Sq);
+
+	}
+
+}
