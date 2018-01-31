@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Dino{
+	public static void main(String[] args) {
+		double gr,kg,t;
+		System.out.println("Enter the weaight(gramm)=");
+		Scanner sc = new Scanner(System.in);
+				gr = sc.nextDouble();
+		kg=gr/1000;
+		t=kg/1000;
+		System.out.println("kg="+kg);
+		System.out.println("ton="+t);
+	}
+}
