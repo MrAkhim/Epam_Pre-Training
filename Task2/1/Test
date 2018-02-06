@@ -1,0 +1,9 @@
+package by.epam.preTraining.task1.model;
+
+public class Test {
+	public static void main(String[] args) {
+		int years=1000, heads;
+		heads = Drako.GrowHeads(years);
+		Drako.TwoEyes(heads);
+	}
+}
