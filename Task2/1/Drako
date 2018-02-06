@@ -1,0 +1,29 @@
+package by.epam.preTraining.task1.model;
+
+public class Drako {
+	public static int GrowHeads(int years) {
+		int heads = 0, i = 0; // i-counter
+		final int Age300 = 300;
+		final int Age200 = 200;
+
+		while (i < years && i < Age200) {
+			heads += 3;
+			i++;
+		}
+		while (i >= Age200 && i < Age300 && i < years) {
+			heads += 2;
+			i++;
+		}
+		while (i >= Age300 && i < years) {
+			heads++;
+			i++;
+		}
+		return heads;
+	};
+
+	public static int TwoEyes(int heads) {
+		int eyes;
+		return eyes = heads * 2;
+	}
+
+}
