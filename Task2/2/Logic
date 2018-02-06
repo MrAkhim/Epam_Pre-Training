@@ -1,0 +1,45 @@
+package by.epam.preTraining.task2.model;
+
+public class AlphabetMatch {
+	public static boolean checkVow1(char letter) {
+		boolean vowel;
+		return vowel = Character.toString(letter).matches("^(?i:[aeiouy]).*");
+	}
+
+	public static boolean checkVow2(char letter) {
+		boolean vowel = false;
+		letter = Character.toLowerCase(letter);
+		if (letter >= 'a' && letter <= 'z') {
+			switch (letter) {
+			case 'a':
+			case 'e':
+			case 'y':
+			case 'u':
+			case 'i':
+			case 'o':
+				vowel = true;
+			}
+		}
+		return vowel;
+	}
+
+	public static boolean checkVow3(char letter) {
+		boolean vowel = false;
+		letter = Character.toLowerCase(letter);
+		if (letter >= 'a' && letter <= 'z') {
+			String vowels = "aeiouy";
+			vowel = vowels.indexOf(letter) != -1;
+		}
+		return vowel;
+	}
+
+	public static boolean checkVow4(char letter) {
+		boolean vowel = false;
+		letter = Character.toLowerCase(letter);
+		if (letter >= 'a' && letter <= 'z') {
+			vowel = letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u';
+		}
+		return vowel;
+	}
+
+}
