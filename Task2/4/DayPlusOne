@@ -1,0 +1,29 @@
+
+public class DayPlusOne {
+	public static boolean leapYear(int year) {
+		boolean leap = false;
+		if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+			leap = true;
+		return leap;
+	}
+
+	public static int[] nextDay(int day, int month, int year) {
+		int[] date=new int[]{day,month,year};
+		if (day < 28 || (day == 28 && month == 2 && leapYear(year)) || 
+				(day == 30 && month % 2 == 1)) {
+			date[0]= ++day;
+			return date;
+		} else if ((day == 28 && month == 2 && year % 4 != 0) ||
+				(day == 30 && month % 2 == 0)|| (day == 31 && month != 12)) {
+			day = 1;
+			date[1]=++month;
+			return date;
+		}
+		if (day == 31 && month == 12)
+			date[0]=1;
+		date[1] = 1;
+		date[2]=++year;
+		return date;
+	}
+
+}
