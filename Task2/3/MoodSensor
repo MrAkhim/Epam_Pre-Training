@@ -1,0 +1,46 @@
+import java.util.Random;
+
+public class MoodSensor {
+
+	public static final int MOOD_QUANTITY = 8;
+	public static final String GOOD = ":)";
+	public static final String BAD = ":(";
+	public static final String KISS = ":*";
+	public static final String XD = "xD";
+	public static final String CONFUSED = ":S";
+	public static final String POKERFACE = ":|";
+	public static final String SURPRISE = ":O";
+	public static final String BEST = "C:";
+
+	public static String randomMood() {
+		String currMood = GOOD;
+		switch (new Random(System.currentTimeMillis()).nextInt(MOOD_QUANTITY)) {
+		case 0:
+			currMood = BAD;
+			break;
+		case 1:
+			currMood = GOOD;
+			break;
+		case 2:
+			currMood = BEST;
+			break;
+		case 3:
+			currMood = CONFUSED;
+			break;
+		case 4:
+			currMood = SURPRISE;
+			break;
+		case 5:
+			currMood = POKERFACE;
+			break;
+		case 6:
+			currMood = KISS;
+			break;
+		case 7:
+			currMood = XD;
+			break;
+		}
+		return currMood;
+	}
+}
+
