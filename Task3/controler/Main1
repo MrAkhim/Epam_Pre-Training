@@ -1,0 +1,12 @@
+package second;
+
+public class Main1 {
+public static void main(String[] args) {
+	int Itterations=1000;
+	int countOrel=HeadsTails.rand2(Itterations);
+	int countReshko=HeadsTails.reshko(Itterations, countOrel);
+	
+	View.show(countOrel, countReshko);
+	
+}
+}
