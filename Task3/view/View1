@@ -1,0 +1,10 @@
+package second;
+
+public class View1 {
+	public static void show(int Orel,int Reshko) {
+		System.out.println("Heads="+Orel);
+		System.out.println("Tails="+Reshko);
+		
+	}
+
+}
