@@ -1,0 +1,10 @@
+package by.epam.preTraining.task4.model;
+
+public class Pow {
+	public static int counting_pow(int number, int degree) {
+		if (degree > 0)
+			return number *= counting_pow(number, degree - 1);
+		else
+			return 1;
+	}
+}
