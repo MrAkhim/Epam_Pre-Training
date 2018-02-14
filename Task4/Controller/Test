@@ -1,0 +1,17 @@
+package by.epam.preTraining.task4.controller;
+import by.epam.preTraining.task4.model.Equals;
+import by.epam.preTraining.task4.model.Fibonacci;
+import by.epam.preTraining.task4.model.Pow;
+import by.epam.preTraining.task4.model.Sum;
+import by.epam.preTraining.task4.model.TowerHanoi;
+import by.epam.preTraining.task4.view.View;
+
+public class Test {
+	public static void main(String[] args) {	
+		View.show(Sum.calculate_sum_of_digits(123));
+		View.show(Pow.counting_pow(5, 3));
+		View.show(Equals.check_sum_equivalent(123,6));
+		View.show(Fibonacci.countFibonacciNumber(11));
+		View.show(TowerHanoi.deduceHanoiAlgorithm(3, "A", "B", "C"));
+	}
+}
