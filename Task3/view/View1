@@ -1,10 +1,8 @@
-package second;
+package by.epam.preTraining.task3.view;
 
-public class View1 {
-	public static void show(int Orel,int Reshko) {
-		System.out.println("Heads="+Orel);
-		System.out.println("Tails="+Reshko);
-		
+public class View {
+	public static void show(Object obj) {
+		System.out.println(obj);
 	}
-
 }
+
