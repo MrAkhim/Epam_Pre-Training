@@ -1,0 +1,136 @@
+public class NumberToText {
+
+	public static String findnums(int N) {
+		String nums = "";
+
+		switch (N % 10) {
+		case 1:
+			nums = "one";
+			break;
+		case 2:
+			nums = "two";
+			break;
+		case 3:
+			nums = "three";
+			break;
+		case 4:
+			nums = "four";
+			break;
+		case 5:
+			nums = "five";
+			break;
+		case 6:
+			nums = "six";
+			break;
+		case 7:
+			nums = "seven";
+			break;
+		case 8:
+			nums = "eight";
+			break;
+		case 9:
+			nums = "nine";
+			break;
+		}
+		return nums;
+	}
+
+	static String findtens(int N) {
+		String tens;
+		if (N / 10 % 10 == 1) {
+			switch (N % 10) {
+			case 1:
+				tens = "eleven";
+				break;
+			case 2:
+				tens = "twelve";
+				break;
+			case 3:
+				tens = "thirteen";
+				break;
+			case 4:
+				tens = "fourteen";
+				break;
+			case 5:
+				tens = "fivteen";
+				break;
+			case 6:
+				tens = "sixteen";
+				break;
+			case 7:
+				tens = "seventeen";
+				break;
+			case 8:
+				tens = "eighteen";
+				break;
+			case 9:
+				tens = "nineteen";
+				break;
+			default:
+				tens = "ten";
+				break;
+			}
+		} else {
+			switch (N / 10 % 10) {
+			case 2:
+				tens = "twenty ";
+				break;
+			case 3:
+				tens = "thirty ";
+				break;
+			case 4:
+				tens = "forty ";
+				break;
+			case 5:
+				tens = "fifty ";
+				break;
+			case 6:
+				tens = "sixty ";
+				break;
+			case 7:
+				tens = "seventy ";
+				break;
+			case 8:
+				tens = "eighty ";
+				break;
+			case 9:
+				tens = "ninety ";
+				break;
+			default:
+				tens = "";
+				break;
+			}
+		}
+		return tens;
+	}
+
+	static String findhundrets(int N) {
+		if (N / 100 == 1) {
+			return findnums(N / 100) + " hundret ";
+		} else {
+			return findnums(N / 100) + " hundrets ";
+		}
+	}
+
+	public static String numberToText(int N) {
+		if (N < 0 || N > 999) {
+			throw new IllegalArgumentException("The number must be between 0 and 999");
+		}
+		String Number = "";
+		if (N / 100 != 0) {
+			Number = findhundrets(N);
+		}
+		if (N / 10 % 10 == 1) {
+			Number += findtens(N);
+		} else if (N / 10 % 10 > 1) {
+			Number += findtens(N) + findnums(N);
+		} else if (N % 10 != 0) {
+			Number += findnums(N);
+		}
+		if (N == 0) {
+			Number = "Zero";
+		}
+
+		return Number;
+	}
+}
