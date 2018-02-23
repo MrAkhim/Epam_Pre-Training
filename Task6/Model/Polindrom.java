@@ -6,8 +6,9 @@ import by.epam.preTraining.task6.exceptions.StackOverflowException;
 public class Polindrom {
 	public static boolean checkPalindrome(String str) throws StackOverflowException, StackEmptyException {
 		MyStackInterface<Character> string = new MyStackArray<>();
+		int halfString=str.length() / 2;
 		int i;
-		for (i = 0; i < str.length() / 2; i++) {
+		for (i = 0; i < halfString; i++) {
 			string.push(str.charAt(i));
 		}
 		if (str.length() % 2 == 1) {
