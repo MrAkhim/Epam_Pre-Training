@@ -51,7 +51,6 @@ public class MyQueueArray<E> implements MyQueueInterface {
 
 		}
 		return array[head];
-
 	}
 
 	@Override
@@ -66,7 +65,6 @@ public class MyQueueArray<E> implements MyQueueInterface {
 			return temp;
 		} else
 			throw new StackEmptyException("The stack is empty!");
-
 	}
 
 	public void enqueue(Object element) throws StackOverflowException {
